@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DoctorController">
+	
+	<children>
+      <Separator layoutY="45.0" prefHeight="10.0" prefWidth="600.0" />
+      <Label layoutX="361.0" layoutY="130.0" />
+      <Separator layoutY="54.0" prefHeight="2.0" prefWidth="600.0" />
+      <Label layoutX="240.0" layoutY="9.0" text="挂号信息">
+         <font>
+            <Font name="Arial" size="30.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateFrom" layoutX="8.0" layoutY="77.0" prefHeight="30.0" prefWidth="123.0" />
+      <Label fx:id="fromdateLabel" layoutX="62.0" layoutY="54.0" text="日" />
+      <ComboBox fx:id="hourFrom" layoutX="135.0" layoutY="77.0" prefHeight="30.0" prefWidth="83.0" />
+      <Label fx:id="fromhourLabel" layoutX="160.0" layoutY="54.0" text="时" />
+      <ComboBox fx:id="minFrom" layoutX="220.0" layoutY="77.0" prefHeight="30.0" prefWidth="83.0" />
+      <Label fx:id="fromminLabel" layoutX="254.0" layoutY="54.0" text="分" />
+      <DatePicker fx:id="dateTo" layoutX="308.0" layoutY="77.0" prefHeight="30.0" prefWidth="117.0" />
+      <ComboBox fx:id="hourTo" layoutX="426.0" layoutY="77.0" prefHeight="30.0" prefWidth="83.0" />
+      <ComboBox fx:id="minTo" layoutX="513.0" layoutY="77.0" prefHeight="30.0" prefWidth="83.0" />
+      <Label fx:id="todateLabel" layoutX="353.0" layoutY="54.0" prefHeight="20.0" prefWidth="15.0" text="日" />
+      <Label fx:id="tohourLabel" layoutX="457.0" layoutY="54.0" prefHeight="20.0" prefWidth="15.0" text="时" />
+      <Label fx:id="tominLabel" layoutX="539.0" layoutY="54.0" text="分" />
+      <TabPane fx:id="docTabPane" layoutX="16.0" layoutY="112.0" prefHeight="252.0" prefWidth="568.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="病人列表">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="PatTable" prefHeight="202.0" prefWidth="568.0">
+                          <columns>
+                            <TableColumn fx:id="PatTableRegNum" prefWidth="75.0" text="挂号编号" />
+                            <TableColumn fx:id="PatTablePatName" prefWidth="75.0" text="病人名称" />
+                              <TableColumn fx:id="PatTableRegDate" prefWidth="162.0" text="挂号日期时间" />
+                              <TableColumn fx:id="PatTableRegType" prefWidth="110.0" text="号种类别" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="收入列表">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="IncomeTable" prefHeight="213.0" prefWidth="568.0">
+                          <columns>
+                            <TableColumn fx:id="IncTableOffName" prefWidth="75.0" text="科室名称" />
+                            <TableColumn fx:id="IncTableDocNum" prefWidth="75.0" text="医生编号" />
+                              <TableColumn fx:id="IncTableDocName" prefWidth="75.0" text="医生名称" />
+                              <TableColumn fx:id="IncTableRegType" prefWidth="75.0" text="号种类别" />
+                              <TableColumn fx:id="IncTablePatNum" prefWidth="75.0" text="挂号人次" />
+                              <TableColumn fx:id="IncTableIncome" prefWidth="75.0" text="收入合计" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="logoffButton" layoutX="135.0" layoutY="364.0" mnemonicParsing="false" onAction="#logoffAction" text="注销" />
+      <Button fx:id="refreshButton" layoutX="400.0" layoutY="364.0" mnemonicParsing="false" onAction="#refreshAction" text="刷新" />
+      <Label fx:id="lineLabel" layoutX="289.0" layoutY="54.0" text="——" />
+	</children>
+</AnchorPane>

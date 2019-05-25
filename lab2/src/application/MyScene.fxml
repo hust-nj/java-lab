@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+	
+	<children>
+		<Button fx:id="LoginButton" layoutX="356.0" layoutY="344.0" mnemonicParsing="false" onAction="#loginAct" prefHeight="30.0" prefWidth="69.0" text="登陆" />
+		<ComboBox fx:id="SelComboBox" layoutX="133.0" layoutY="344.0" prefHeight="30.0" prefWidth="112.0" />
+      <Button fx:id="ClearButton" layoutX="484.0" layoutY="344.0" mnemonicParsing="false" onAction="#clearAct" prefHeight="30.0" prefWidth="69.0" text="清空" />
+      <TextField fx:id="UserNameText" layoutX="88.0" layoutY="152.0" />
+      <Label layoutX="32.0" layoutY="157.0" text="用户名" />
+      <Label layoutX="326.0" layoutY="157.0" text="密码" />
+      <Separator layoutY="56.0" prefHeight="10.0" prefWidth="600.0" />
+      <Label layoutX="262.0" layoutY="61.0" />
+      <Separator layoutY="65.0" prefHeight="2.0" prefWidth="600.0" />
+      <Label layoutX="213.0" layoutY="14.0" prefHeight="43.0" prefWidth="190.0" text="自助挂号系统">
+         <font>
+            <Font name="Arial Black" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="349.0" text="登陆类型" />
+      <PasswordField fx:id="PassWordText" layoutX="368.0" layoutY="152.0" />
+	</children>
+</AnchorPane>
